@@ -1,0 +1,18 @@
+.title {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 46px;
+  font-weight: 700;
+}
+.home-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 50px;
+}
+.container {
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
+}

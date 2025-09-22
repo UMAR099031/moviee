@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 32px;
+
+}
+nav{
+    display: flex;
+    gap:15px;
+    button {
+        border-radius: 10px !important;
+    }
+}
+
+nav .btn.btn-green {
+    background-color: #1DE782;
+    border: none;
+    cursor: pointer;
+}
+nav .btn.btn-trnsp {
+    background-color: transparent;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+.hh{
+    text-align: center; 
+    font-size: 46px;
+    font-weight: 700;
+    color: white;
+    margin-top: 50px;
+}
