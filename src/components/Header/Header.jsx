@@ -1,22 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./Header.css";
+import './Header.css'
+import Logo from "../../assets/movie.svg"
+import { Link } from 'react-router-dom'
 
-const Header = ({ buttons }) => {
+const Header = () => {
+
   return (
-    <div className="header">
-      <div>
-        <img src="/src/assets/movie.svg" alt="cinema" />
+    <div className='header'>
+      <div className="logo">
+        <Link to={"/"}>
+         <img width={127} src={Logo} alt="" />
+        </Link>
+       
       </div>
       <nav className="btns">
-        {buttons?.map((btn, index) => (
-          <Link key={index} to={btn.to}>
-            <button className={`btn ${btn.variant}`}>{btn.label}</button>
-          </Link>
-        ))}
+        <Link to={"/login"}>
+          <button className='btn btn-green'>Login</button>
+        </Link>
+      <Link to={"/register"}>
+        <button className='btn btn-trnsp'>Register</button>
+      </Link>
+
+     
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

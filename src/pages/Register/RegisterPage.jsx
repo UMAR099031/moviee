@@ -1,11 +1,11 @@
 import React from "react";
 import "./Register.css";
-import { Link } from "react-router-dom"; // для перехода без перезагрузки
+import { Link } from "react-router-dom"; 
 
 const RegisterPage = () => {
   return (
     <div>
-      {/* Кнопка возврата на главную */}
+
 
       <div className="form-wrapper">
         <div className="div-1">

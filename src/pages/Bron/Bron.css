@@ -1,0 +1,195 @@
+/* src/pages/SeatSelection/SeatSelection.css */
+
+.seat-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.seat-page h2 {
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.seat-page h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: 500;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.seat-page p {
+    text-align: center;
+}
+.seat-page img{
+   margin-left: 635px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+.seats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+
+.seat {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  border: none;
+  background: #fff;
+  color: #000;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.seat:hover {
+  transform: scale(1.05);
+}
+
+
+.seat.selected {
+  background: #00c853;
+  color: #fff;
+}
+
+.seat.occupied {
+  background: #444;
+  color: #888;
+  cursor: not-allowed;
+}
+
+
+.screen {
+  margin: 25px auto 0;
+  width: 300px;
+  height: 22px;
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 22px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.summary{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    border-top: 1px solid gray;
+
+}
+.bottom-bar {
+  background: #000;
+  border-top: 1px solid #333;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-bar .summary {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bottom-bar .summary p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.bottom-bar .summary .price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #00c853;
+}
+
+.bottom-bar .buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.bottom-bar button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.bottom-bar button.back {
+  background: transparent;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.bottom-bar button.back:hover {
+  border-color: #fff;
+}
+
+.bottom-bar button.proceed {
+  background: #00c853;
+  color: #fff;
+}
+
+.bottom-bar button.proceed:hover {
+  background: #00a844;
+}
+.spani{
+    display: flex;
+    gap: 50px;
+    padding: 40px;
+}
+.my-button {
+  background-color: #ffffff; 
+  color: #000000; 
+  border: 1px solid gray; 
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; 
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.my-button:hover {
+  background-color: #1DE782; 
+  color: #ffffff; 
+}
+.proceed{
+     background-color: #ffffff; 
+  color: #000000; 
+  border: 1px solid gray; 
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; 
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.proceed:hover {
+  background-color: #1DE782; 
+  color: #ffffff; 
+}

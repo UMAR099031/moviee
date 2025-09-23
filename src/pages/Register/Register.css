@@ -1,10 +1,10 @@
 
-/* Форма Login/Register */
+
 .form-wrapper {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* центрируем горизонтально, вертикально скролл свободен */
-  padding: 50px 0;         /* отступ сверху и снизу для скролла */
+  align-items: flex-start; 
+  padding: 50px 0;   
 }
 
 .div-1 {
@@ -15,7 +15,7 @@
   background-color: white;
 }
 
-/* Кнопки в формах */
+
 .btn-2 {
   cursor: pointer;
   width: 130px;
@@ -41,7 +41,7 @@
   font-weight: 500;
 }
 
-/* Инпуты и заголовки */
+
 h4 {
   color: #5A5A5D;
   font-size: 16px;
