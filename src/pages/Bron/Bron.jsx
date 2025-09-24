@@ -63,14 +63,14 @@ const SeatSelection = () => {
 
       <div className="summary">
         <p>Выбранные места: {selectedSeats.join(", ") || "нет"}</p>
-        <p>Итого: RM {totalPrice.toFixed(2)}</p>
+        <p>Итого: {totalPrice.toFixed(2)}$</p>
         <span className="spani">
         <button
           className="proceed"
           disabled={selectedSeats.length === 0}
           onClick={() => alert("заброн кылынды иууу❤️‍🔥")}
         >
-          Забронировать
+          Proceed payment
         </button>
         <button className="my-button" onClick={() => navigate(-2)}>уйго</button>
         </span>
