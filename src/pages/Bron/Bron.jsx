@@ -68,7 +68,7 @@ const SeatSelection = () => {
         <button
           className="proceed"
           disabled={selectedSeats.length === 0}
-          onClick={() => alert("заброн кылынды иууу❤️‍🔥")}
+          onClick={() => alert("Payment successful!")}
         >
           Proceed payment
         </button>

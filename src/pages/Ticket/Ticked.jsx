@@ -6,8 +6,8 @@ const imgURL = "https://image.tmdb.org/t/p/w500";
 const API_KEY = "2fa8f297328a4293f06805fe0c1b915d";
 
 const Ticked = () => {
-  const { id } = useParams(); // ✅ берём id из URL
-  const navigate = useNavigate(); // для кнопки "Назад"
+  const { id } = useParams(); 
+  const navigate = useNavigate(); 
   const [movieDetails, setMovieDetails] = useState(null);
   const [selectedTheater, setSelectedTheater] = useState("IOI Putrajaya");
   const [selectedDate, setSelectedDate] = useState("22 Oct Mon");

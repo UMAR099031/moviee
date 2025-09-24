@@ -5,6 +5,7 @@ import LoginPage from '../pages/Login/LoginPage';
 import RegisterPage from '../pages/Register/RegisterPage';
 import Ticked from '../pages/Ticket/Ticked';
 import Bron from '../pages/Bron/Bron';
+import OrderDetail from '../pages/OrderDetail/OrderDetail';
 
 const AppRoutes = () => {
   return (
@@ -14,6 +15,7 @@ const AppRoutes = () => {
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/ticket/:id" element={<Ticked />} />  
       <Route path="/seats/:id" element={<Bron />} />
+      <Route path="/detail" element={<OrderDetail />} />
     </Routes>
   )
 }
