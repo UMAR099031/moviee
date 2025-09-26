@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Bron.css";
 
+import Bron from "../Bron/Bron";
 const SeatSelection = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -25,6 +26,18 @@ const SeatSelection = () => {
   };
 
   const totalPrice = selectedSeats.length * 18.95; 
+
+const [proceed, setProceed] = useState("");
+
+    const checkoutClickk = () => {
+        setProceed("bron");
+    }
+    if (proceed === "bron") {
+        return <Bron setProceed={setProceed}/>;
+    }
+    if (proceed === "payment") {
+        return <OrderDetail/>;
+    }
 
   return (
     <div className="seat-page">
@@ -67,8 +80,7 @@ const SeatSelection = () => {
         <span className="spani">
         <button
           className="proceed"
-          disabled={selectedSeats.length === 0}
-          onClick={() => alert("Payment successful!")}
+          onClick={() => navigate("/detail",{state:{title, poster_path, theater, date, time, selectedSeats, totalPrice}})}
         >
           Proceed payment
         </button>

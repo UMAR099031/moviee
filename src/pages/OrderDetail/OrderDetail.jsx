@@ -1,43 +1,74 @@
-import React from "react";
+import { useState } from "react";
+import { useLocation } from "react-router-dom"; 
 import "./OrderDetail.css";
+import OTP from "../../components/OTP/OTP";
+import PaymentSuccess from "../../components/PaymentSuccess/PaymentSuccess";
+
 const OrderDetail = () => {
+  const [content, setContent] = useState("");
+
+  const location = useLocation();
+  const { title, date, time, selectedSeats, totalPrice } = location.state || {};
+
+  
+  const checkoutClick = () => {
+    setContent("otp");
+  };
+
+  if (content === "otp") {
+    return <OTP setContent={setContent} />;
+  }
+  if (content === "payment") {
+    return <PaymentSuccess />;
+  }
+
+
+  const tickets = [
+    { label: `Ticket(${selectedSeats?.length || 0})`, value: selectedSeats?.join(", ") || "—" },
+    { label: "Hours", value: time || "—" },
+  ];
+
+
+  const transactionDetails = [
+    { label: "REGULAR SEAT", value: `${(totalPrice || 0).toFixed(2)}$` },
+    { label: "Service Charge (6%)", value: `${((totalPrice || 0) * 0.06).toFixed(2)}$` },
+    { label: "Total payment", value: `${((totalPrice || 0) * 1.06).toFixed(2)}$` },
+  ];
+
   return (
     <div className="order">
       <div className="o-detail">
         <h2>Booking Detail</h2>
-        <h4>Shedule</h4>
+        <h4>Schedule</h4>
         <p>Movie Title</p>
-        <h3>SPIDERMAN NO WAY HOME</h3>
-        <p>Date</p>
-        <h4>Mon, 23 Oct 2023</h4>
-        <div className="ticket-info">
-          <div className="seet">
-            <p>Ticket(3)</p>
-            <h4>C8, C9, C10</h4>
-          </div>
+        <h4>{title || "—"}</h4>
 
-          <div className="hour">
-            <p>Hours</p>
-            <h4>14:40</h4>
-          </div>
+        <p>Date</p>
+        <h4>{date || "—"}</h4>
+
+        <div className="ticket-info">
+          {tickets.map((item, index) => (
+            <div key={index} className="seet">
+              <p className="se">{item.label}</p>
+              <h4 className="se">{item.value}</h4>
+            </div>
+          ))}
         </div>
+
         <p>Transaction Detail</p>
+
+   
         <div className="t-detail">
-          <div>
-            <h4>REGULAR SEAT</h4>
-            <h4>RM 55.70 x3</h4>
-          </div>
-          <div>
-            <h4>Service Charge (6%)</h4>
-            <h4>RM 3.30 x3</h4>
-          </div>
-          <div>
-            <h4>Total payment</h4>
-            <h4>RM 62.10</h4>
-          </div>
+          {transactionDetails.map((item, index) => (
+            <div key={index}>
+              <h4>{item.label}</h4>
+              <h4>{item.value}</h4>
+            </div>
+          ))}
         </div>
+
         <p>*Purchased ticket cannot be canceled</p>
-        <button>Checkout Ticket</button>
+        <button onClick={checkoutClick}>Checkout Ticket</button>
       </div>
     </div>
   );

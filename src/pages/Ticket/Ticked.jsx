@@ -5,6 +5,9 @@ import "./Ticked.css";
 const imgURL = "https://image.tmdb.org/t/p/w500";
 const API_KEY = "2fa8f297328a4293f06805fe0c1b915d";
 
+
+
+
 const Ticked = () => {
   const { id } = useParams(); 
   const navigate = useNavigate(); 
@@ -45,6 +48,8 @@ const Ticked = () => {
 
   const times = ["15:40", "18:00", "21:30", "23:00"];
   const theaters = ["IOI Putrajaya", "Bukit Bintang", "KB Mall"];
+
+
 
   return (
     <div className="detail-page-wrapper">

@@ -1,0 +1,38 @@
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+.payment-success {
+    text-align: center;
+    width: 389px;
+    height: 456px;
+    display: flex;
+    flex-direction: column;
+    img {
+        width: 166px;
+        height: 166px;
+        margin-left: 110px;
+        margin-top: 40px;
+    }
+    button{
+        width: 389px;
+        height: 60px;
+        background-color: #1DE782;
+        border-radius: 8px;
+        border: none;
+        font-size: 24px;
+        font-weight: 500;
+        color: white;
+        margin-top: 40px;
+    }
+    .btn-25 {
+    width: 389px;
+    height: 60px;
+    background-color: transparent;
+    border: 1px solid white;
+    margin-top: 15px;
+}
+}
